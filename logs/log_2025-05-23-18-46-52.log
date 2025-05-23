@@ -1,0 +1,34 @@
+[2025-05-23 18:46:54,678] root - INFO - ====================Data Ingestion log started.==================== 
+[2025-05-23 18:46:54,679] root - INFO - Data Ingestion Config: DatasetConfig(dataset_download_url='https://github.com/entbappy/Branching-tutorial/raw/master/books_data.zip', raw_data_dir='artifacts\\dataset\\raw_data', ingested_dir='artifacts\\dataset\\ingested_data')
+[2025-05-23 18:46:54,679] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts\\dataset\\clean_data', books_csv_file='artifacts\\dataset\\ingested_data\\BX-Books.csv', ratings_csv_file='artifacts\\dataset\\ingested_data\\BX-Book-Ratings.csv', serialized_objects_dir='artifacts\\serialized_objects')
+[2025-05-23 18:46:54,679] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts\\dataset\\clean_data\\clean_data.csv', transformed_data_dir='artifacts\\dataset\\transformed_data')
+[2025-05-23 18:46:54,679] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts\\dataset\\clean_data', books_csv_file='artifacts\\dataset\\ingested_data\\BX-Books.csv', ratings_csv_file='artifacts\\dataset\\ingested_data\\BX-Book-Ratings.csv', serialized_objects_dir='artifacts\\serialized_objects')
+[2025-05-23 18:46:54,679] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts\\dataset\\transformed_data\\transformed_data.pkl', trained_model_dir='artifacts\\trained_model', trained_model_name='model.pkl')
+[2025-05-23 18:46:54,679] root - INFO - Downloading data from https://github.com/entbappy/Branching-tutorial/raw/master/books_data.zip into file artifacts\dataset\raw_data\books_data.zip
+[2025-05-23 18:47:10,569] root - INFO - Downloaded data from https://github.com/entbappy/Branching-tutorial/raw/master/books_data.zip into file artifacts\dataset\raw_data\books_data.zip
+[2025-05-23 18:47:11,120] root - INFO - Extracting zip file: artifacts\dataset\raw_data\books_data.zip into dir: artifacts\dataset\ingested_data
+[2025-05-23 18:47:11,121] root - INFO - ====================Data Ingestion log completed.==================== 
+
+
+[2025-05-23 18:47:11,121] root - INFO - ====================Data Validation log started.==================== 
+[2025-05-23 18:47:13,027] root - INFO -  Shape of ratings data file: (1149780, 3)
+[2025-05-23 18:47:13,027] root - INFO -  Shape of books data file: (271360, 8)
+[2025-05-23 18:47:14,306] root - INFO -  Shape of the final clean dataset: (59850, 9)
+[2025-05-23 18:47:14,521] root - INFO - Saved cleaned data to artifacts\dataset\clean_data
+[2025-05-23 18:47:14,541] root - INFO - Saved final_rating serialization object to artifacts\serialized_objects
+[2025-05-23 18:47:14,625] root - INFO - ====================Data Validation log completed.==================== 
+
+
+[2025-05-23 18:47:14,625] root - INFO - ====================Data Transformation log started.==================== 
+[2025-05-23 18:47:14,789] root - INFO -  Shape of book pivot table: (742, 888)
+[2025-05-23 18:47:14,802] root - INFO - Saved pivot table data to artifacts\dataset\transformed_data
+[2025-05-23 18:47:14,803] root - INFO - Saved book_names serialization object to artifacts\serialized_objects
+[2025-05-23 18:47:14,807] root - INFO - Saved book_pivot serialization object to artifacts\serialized_objects
+[2025-05-23 18:47:14,809] root - INFO - ====================Data Transformation log completed.==================== 
+
+
+[2025-05-23 18:47:14,809] root - INFO - ====================Model Trainer log started.==================== 
+[2025-05-23 18:47:14,830] root - INFO - Saving final model to artifacts\trained_model\model.pkl
+[2025-05-23 18:47:14,830] root - INFO - ====================Model Trainer log completed.==================== 
+
+
