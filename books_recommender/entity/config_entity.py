@@ -1,4 +1,5 @@
 from collections import namedtuple
+# entity means it's return type of the function .. 
 
 DataIngestionConfig = namedtuple("DatasetConfig", ["dataset_download_url",
                                                    "raw_data_dir",

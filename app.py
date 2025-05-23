@@ -99,7 +99,7 @@ class Recommendation:
 
 
 if __name__ == "__main__":
-    st.header('End to End Books Recommender System')
+    st.header(' Books Recommender System')
     st.text("This is a collaborative filtering based recommendation system!")
 
     obj = Recommendation()

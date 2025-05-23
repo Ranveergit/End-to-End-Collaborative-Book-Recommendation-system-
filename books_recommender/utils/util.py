@@ -14,3 +14,7 @@ def read_yaml_file(file_path:str)->dict:
             return yaml.safe_load(yaml_file)
     except Exception as e:
         raise AppException(e,sys) from e
+
+
+
+## in utils we write thsoe function which we use acrosse the pipiline like here we are using read yaml files  it can be used accross the pipline ... 

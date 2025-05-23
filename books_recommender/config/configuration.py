@@ -5,8 +5,8 @@ from books_recommender.utils.util import read_yaml_file
 from books_recommender.exception.exception_handler import AppException
 from books_recommender.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig, ModelRecommendationConfig
 from books_recommender.constant import *
-
-
+# config file path comes from the book_recommender.constant folder --> where we define the path of configration.yml file 
+# taking the path ans then reading the yml file -- <> read yml file is written in the utils folder because we need it across the pipeline
 class AppConfiguration:
     def __init__(self, config_file_path: str = CONFIG_FILE_PATH):
         try:
@@ -14,7 +14,13 @@ class AppConfiguration:
         except Exception as e:
             raise AppException(e, sys) from e
 
-    
+
+
+# book recommender.entity define the type of return type of the function
+# here we are using the named tuple to define the return type of the function
+## in the python we can also define the return type of the function using the class but here we are using the named tuple to define the return type of the function 
+## here we are using dataingestinconfig,which is written in the entity folder to define the return type of the function by using the named tuple
+
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         try:
             data_ingestion_config = self.configs_info['data_ingestion_config']
@@ -35,6 +41,8 @@ class AppConfiguration:
 
         except Exception as e:
             raise AppException(e, sys) from e
+
+
 
 
     
